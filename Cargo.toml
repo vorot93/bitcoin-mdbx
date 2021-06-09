@@ -1,0 +1,25 @@
+[package]
+name = "bitcoin-mdbx"
+version = "0.1.0"
+authors = ["Artem Vorotnikov <artem@vorotnikov.me>"]
+edition = "2018"
+description = "Normalize and store Bitcoin's database in MDBX"
+license = "Apache-2.0"
+
+[dependencies]
+anyhow = "1"
+arrayref = "0.3"
+bitcoin = { version = "0.26", features = ["use-serde"] }
+bytes = "1"
+db-key = "0.0.5"
+hex = "0.4"
+hex-literal = "0.3"
+leveldb = "0.8"
+mdbx = { git = "https://github.com/vorot93/mdbx-rs" }
+primitive-types = "0.9"
+rmp-serde = "0.15"
+serde = { version = "1", features = ["derive"] }
+structopt = "0.3"
+tempfile = "3"
+tracing = "0.1"
+tracing-subscriber = "0.2"
